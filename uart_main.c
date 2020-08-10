@@ -31,7 +31,7 @@ int UART_Recieve_data()
 {
 	while(!(UCSRA) & (1<<RXC)); // pooling to check if the recieve  is completed 
     
-	return 1 ;	
+	return UDR ;	
 }
 
 int main(void) {
