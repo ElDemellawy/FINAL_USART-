@@ -29,7 +29,7 @@ void UART_TRANSMITCHAR (char data)
 
 int UART_Recieve_data()
 {
-	while(!(UCSRA) & (1<<RXC));
+	while(!(UCSRA) & (1<<RXC)); // pooling to check if the recieve  is completed 
     
 	return 1 ;	
 }
